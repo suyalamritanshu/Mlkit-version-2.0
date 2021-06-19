@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="5dp"
+            android:text="Result"
+            android:textSize="22sp" />
+
+        <EditText
+            android:id="@+id/scannedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/scannedtexbg"
+            android:hint="Text detected"
+            android:padding="5dp"
+            android:paddingStart="5dp"
+            android:textColor="@color/textColor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/poppins_medium"
+            android:padding="5dp"
+            android:text="Image Preview"
+            android:textSize="22sp" />
+
+        <ImageView
+            android:id="@+id/PreviewIv"
+            android:layout_width="match_parent"
+            android:layout_height="103dp"
+            android:background="@drawable/scannedtexbg"
+            android:padding="5dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/decodeBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Decode Text" />
+
+
+        <TextView
+            android:id="@+id/decodedText"
+            android:layout_width="286dp"
+            android:layout_height="92dp"
+            android:background="@drawable/scannedtexbg"
+            android:hint="Decoded Text"
+            android:padding="5dp"
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll2"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/whatsapp"
+            android:layout_width="115dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/scannedtexbg"
+            android:src="@drawable/whatsappp" />
+
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="127dp"
+            android:layout_height="42dp"
+            android:layout_weight="1"
+            android:background="@drawable/scannedtexbg"
+            android:src="@drawable/share" />
+
+        <ImageView
+            android:id="@+id/copy"
+            android:layout_width="113dp"
+            android:layout_height="41dp"
+            android:layout_weight="1"
+            android:background="@drawable/scannedtexbg"
+            android:src="@drawable/copy" />
+
+    </LinearLayout>
+
+</RelativeLayout>
